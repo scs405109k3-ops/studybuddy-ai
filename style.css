@@ -39,3 +39,13 @@ footer {
   text-align: center;
   padding: 15px;
 }
+.download {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.indus-badge {
+  width: 220px;
+  cursor: pointer;
+}
+
