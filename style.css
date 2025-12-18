@@ -43,9 +43,11 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
-
 .indus-badge {
-  width: 220px;
+  width: 200px;
+  margin-top: 20px;
   cursor: pointer;
 }
+
+
 
