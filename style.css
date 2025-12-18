@@ -12,60 +12,74 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background: #5b74f1;
+  background: linear-gradient(135deg, #5b74f1, #7b5cff);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
+  animation: fadeDown 1s ease;
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 38px;
   margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-/* DOWNLOAD BUTTONS */
+/* DOWNLOAD BUTTON ROW */
 .download-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   flex-wrap: wrap;
+  animation: fadeUp 1.2s ease;
 }
 
+/* INDUS IMAGE BUTTON */
 .indus-badge {
   width: 180px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.indus-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* APK BUTTON */
 .apk-btn {
   background-color: #ffffff;
   color: #5b74f1;
-  padding: 12px 22px;
+  padding: 13px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   border: 2px solid #5b74f1;
+  transition: all 0.3s ease;
 }
 
 .apk-btn:hover {
   background-color: #5b74f1;
   color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* CONTENT SECTIONS */
 .content {
-  padding: 40px 20px;
-  max-width: 800px;
+  padding: 45px 20px;
+  max-width: 820px;
   margin: auto;
+  animation: fadeUp 1.4s ease;
 }
 
 .content h2 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #5b74f1;
 }
 
@@ -78,4 +92,27 @@ body {
 .content ul li {
   margin-left: 20px;
   margin-bottom: 8px;
+}
+
+/* 🔥 KEYFRAME ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
