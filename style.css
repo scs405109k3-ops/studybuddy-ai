@@ -1,53 +1,81 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background-color: #f4f7ff;
+}
+
+body {
+  background-color: #f4f6fc;
   color: #333;
 }
 
-header {
-  background: linear-gradient(135deg, #4a6cff, #6f8cff);
+/* HERO SECTION */
+.hero {
+  background: #5b74f1;
   color: white;
   text-align: center;
   padding: 60px 20px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background: white;
-  color: #4a6cff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 20px;
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
-h2 {
-  color: #4a6cff;
+/* DOWNLOAD BUTTONS */
+.download-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-.download {
-  text-align: center;
-  margin-top: 20px;
-}
 .indus-badge {
-  width: 200px;
-  margin-top: 20px;
+  width: 180px;
   cursor: pointer;
 }
 
+.apk-btn {
+  background-color: #ffffff;
+  color: #5b74f1;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #5b74f1;
+}
 
+.apk-btn:hover {
+  background-color: #5b74f1;
+  color: white;
+}
 
+/* CONTENT SECTIONS */
+.content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+  color: #5b74f1;
+}
+
+.content p,
+.content ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content ul li {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
