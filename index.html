@@ -1,100 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Study Buddy AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Buddy AI – Homework Assistant</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7ff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6a5cff, #8e7bff);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: slideDown 1s ease;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 30px;
+      animation: fadeIn 1.8s ease;
+    }
+
+    /* BUTTONS */
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: white;
+      color: #6a5cff;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      animation: popIn 1.5s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.2);
+    }
+
+    .btn img {
+      height: 22px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* SECTION */
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #6a5cff;
+    }
+
+    section p.center {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #555;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #6a5cff;
+    }
+
+    /* SCREENSHOTS */
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      align-items: center;
+    }
+
+    .screenshots img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      transition: transform 0.4s;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      background: #eef0ff;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
 <body>
 
-<!-- DARK MODE BUTTON -->
-<button id="darkToggle">🌙 Dark Mode</button>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>Study Buddy AI</h1>
+      <p>Your smart AI homework assistant for doubts, notes, and tasks</p>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Study Buddy AI</h1>
-  <p>Your Smart AI Homework Assistant</p>
-
-  <div class="download-row">
-    <a href="https://indusapp.store/avqtopzy" target="_blank">
-      <img src="./indus.png" alt="Get it on Indus Appstore" class="indus-badge">
-    </a>
-
-    <a href="study-buddy-ai.apk.apk" download class="apk-btn">
-      Download APK
-    </a>
+      <div class="buttons">
+        <a class="btn" href="study-buddy-ai.apk" download>📦 Download APK</a>
+        <a class="btn" href="https://indusapp.store/avqtopzy" target="_blank">
+          <img src="indus.png" alt="Indus"> Indus Appstore
+        </a>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section class="content">
-  <h2>About the App</h2>
-  <p>
-    Study Buddy AI helps students solve homework, understand concepts,
-    and prepare for exams using Artificial Intelligence.
-  </p>
-</section>
+  <!-- ABOUT -->
+  <section>
+    <h2>About the App</h2>
+    <p class="center">
+      Study Buddy AI is built to help students complete homework faster, manage tasks, take notes,
+      and ask AI-powered questions anytime. Simple, fast, and student‑friendly.
+    </p>
+  </section>
 
-<!-- FEATURES -->
-<section class="content">
-  <h2>Key Features</h2>
-  <ul>
-    <li>📚 Homework assistance</li>
-    <li>🤖 AI-based answers</li>
-    <li>📝 Step-by-step explanations</li>
-    <li>📱 Easy to use</li>
-  </ul>
-</section>
+  <!-- FEATURES -->
+  <section>
+    <h2>Key Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Ask AI</h3>
+        <p>Instant answers for homework, doubts, and concepts.</p>
+      </div>
+      <div class="feature">
+        <h3>Task Manager</h3>
+        <p>Track homework and daily study tasks easily.</p>
+      </div>
+      <div class="feature">
+        <h3>Smart Notes</h3>
+        <p>Save and organize study notes in one place.</p>
+      </div>
+      <div class="feature">
+        <h3>Student Friendly</h3>
+        <p>Clean design, smooth animations, and easy to use.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- SCREENSHOTS -->
-<section class="content">
-  <h2>App Screenshots</h2>
-  <div class="screenshots">
-    <img src="https://via.placeholder.com/200x400?text=Home">
-    <img src="https://via.placeholder.com/200x400?text=Chat">
-    <img src="https://via.placeholder.com/200x400?text=Answer">
-  </div>
-</section>
+  <!-- SCREENSHOTS -->
+  <section>
+    <h2>App Screenshots</h2>
+    <p class="center">Take a look at the Study Buddy AI app interface</p>
 
-<!-- HOW IT WORKS -->
-<section class="content">
-  <h2>How It Works</h2>
-  <ol>
-    <li>Enter or upload your question</li>
-    <li>AI analyzes instantly</li>
-    <li>Get clear explanations</li>
-    <li>Learn better</li>
-  </ol>
-</section>
+    <div class="screenshots">
+      <img src="screen1.jpeg" alt="Screenshot 1">
+      <img src="screen2.jpeg" alt="Screenshot 2">
+      <img src="screen3.jpeg" alt="Screenshot 3">
+      <img src="screen4.jpeg" alt="Screenshot 4">
+    </div>
+  </section>
 
-<!-- FAQ -->
-<section class="content">
-  <h2>Frequently Asked Questions</h2>
-  <p><b>Q: Is Study Buddy AI free?</b><br>Yes, basic features are free.</p>
-  <p><b>Q: Is it safe for students?</b><br>Yes, it is student-friendly.</p>
-  <p><b>Q: Which classes are supported?</b><br>All Classes.</p>
-</section>
-
-<!-- CONTACT -->
-<section class="content">
-  <h2>Contact & Support</h2>
-  <p>Email: <b>studybuddyai.help@gmail.com</b></p>
-  <p>For issues or suggestions, contact us anytime.</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Study Buddy AI | All Rights Reserved</p>
-</footer>
-
-<!-- DARK MODE SCRIPT -->
-<script>
-  const btn = document.getElementById("darkToggle");
-  btn.onclick = () => document.body.classList.toggle("dark");
-</script>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Study Buddy AI • Built by K.V.S Karthik
+  </footer>
 
 </body>
 </html>
-
